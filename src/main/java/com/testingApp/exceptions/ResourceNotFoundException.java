@@ -1,4 +1,4 @@
-package com.codingshuttle.springbootwebtutorial.springbootwebtutorial.exceptions;
+package com.testingApp.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException{
     public ResourceNotFoundException(String message) {

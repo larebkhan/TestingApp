@@ -1,11 +1,12 @@
-package com.codingshuttle.springbootwebtutorial.springbootwebtutorial.advices;
+package com.testingApp.advices;
 
-import com.codingshuttle.springbootwebtutorial.springbootwebtutorial.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.testingApp.exceptions.ResourceNotFoundException;
 
 import java.util.List;
 import java.util.stream.Collectors;

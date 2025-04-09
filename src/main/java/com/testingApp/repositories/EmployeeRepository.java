@@ -1,10 +1,14 @@
-package com.codingshuttle.springbootwebtutorial.springbootwebtutorial.repositories;
+package com.testingApp.repositories;
 
-import com.codingshuttle.springbootwebtutorial.springbootwebtutorial.entities.EmployeeEntity;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
+import com.testingApp.entities.EmployeeEntity;
+
+
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Long> {
 
+    List<EmployeeEntity> findByEmail(String email);
 }

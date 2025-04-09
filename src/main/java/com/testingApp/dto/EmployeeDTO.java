@@ -1,7 +1,8 @@
-package com.codingshuttle.springbootwebtutorial.springbootwebtutorial.dto;
+package com.testingApp.dto;
 
-import com.codingshuttle.springbootwebtutorial.springbootwebtutorial.annotations.EmployeeRoleValidation;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.testingApp.annotations.EmployeeRoleValidation;
+
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -41,7 +42,7 @@ public class EmployeeDTO {
     @Digits(integer = 6, fraction = 2, message = "The salary can be in the form XXXXX.YY")
     @DecimalMax(value = "100000.99")
     @DecimalMin(value = "100.50")
-    private Double salary;
+    private Long salary;
 
     @PastOrPresent(message = "DateOfJoining field in Employee cannot be in the future")
     private LocalDate dateOfJoining;

@@ -1,4 +1,4 @@
-package com.codingshuttle.springbootwebtutorial.springbootwebtutorial.entities;
+package com.testingApp.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Table(name = "employees")
 public class EmployeeEntity {
 
@@ -24,5 +25,5 @@ public class EmployeeEntity {
     @JsonProperty("isActive")
     private Boolean isActive;
     private String role;
-    private Double salary;
+    private Long salary;
 }

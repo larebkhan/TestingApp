@@ -11,8 +11,11 @@ import com.testingApp.entities.EmployeeEntity;
 import com.testingApp.exceptions.ResourceNotFoundException;
 import com.testingApp.repositories.EmployeeRepository;
 
+<<<<<<<< HEAD:src/main/java/com/testingApp/services/EmployeeServiceImpl.java
 import lombok.RequiredArgsConstructor;
 
+========
+>>>>>>>> origin/main:src/main/java/com/testingApp/services/EmployeeService.java
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;

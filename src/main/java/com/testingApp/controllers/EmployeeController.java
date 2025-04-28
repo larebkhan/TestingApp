@@ -1,6 +1,7 @@
 package com.testingApp.controllers;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/employees")
+@RequiredArgsConstructor
 public class EmployeeController {
 
 //    @GetMapping(path = "/getSecretMessage")
@@ -25,9 +27,6 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
 
-    public EmployeeController(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
 
 
 
@@ -45,9 +44,9 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<EmployeeDTO> createNewEmployee(@RequestBody @Valid EmployeeDTO inputEmployee) {
+    public EmployeeDTO createNewEmployee(@RequestBody @Valid EmployeeDTO inputEmployee) {
         EmployeeDTO savedEmployee = employeeService.createNewEmployee(inputEmployee);
-        return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
+        return savedEmployee;
     }
 
 

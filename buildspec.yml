@@ -4,6 +4,13 @@ phases:
   install:
     runtime-versions:
       java: corretto17
+    commands:
+      - echo Installing Maven..
+
+  pre_build:
+    commands:
+      - echo logging in to Docker Hub...
+      - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
   build:
     commands:
       - echo Building, Testing and packaging the application...
